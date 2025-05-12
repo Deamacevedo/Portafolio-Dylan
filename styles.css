@@ -28,7 +28,7 @@ body {
 /* Fuentes */
 @font-face {
   font-family: "Montserrat";
-  src: url(./Fuentes/Montserrat-Regular.ttf) format("truetype");
+  src: url(./fonts/Montserrat-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
