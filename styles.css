@@ -13,10 +13,151 @@ body {
   padding: 0;
   scroll-behavior: smooth;
 }
+/* Cuerpo */
+body {
+  display: grid;
+  grid-template-areas:
+    "sobre-mi"
+    "experiencia"
+    "educacion"
+    "habilidades"
+    "contacto"
+    "referencias";
+}
 
+/* Fuentes */
 @font-face {
   font-family: "Montserrat";
   src: url(./Fuentes/Montserrat-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
+
+/* Manejo de grids */
+#sobre-mi { grid-area: sobre-mi; }
+#experiencia { grid-area: experiencia; }
+#educacion { grid-area: educacion; }
+#habilidades { grid-area: habilidades; }
+#contacto { grid-area: contacto; }
+#referencias { grid-area: referencias; }
+
+/* Manejo header */
+#inicio {
+  height: 500px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding-top: 35px;
+  z-index: 1;
+  background-color: #f4f4f4;
+}
+
+/* Carrusel en header */
+.galeria-carrusel {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.galeria-track {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  min-width: 200%;
+  animation: deslizar 20s linear infinite alternate;
+}
+
+.img-box {
+  min-width: 250px;
+  height: 100%;
+  padding: 0px 1.5px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Contenedores de vidrio en header */
+.glass-box {
+  background: rgba(22, 192, 45, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: clamp(10px, 2vw, 30px) clamp(15px, 4vw, 40px);
+  border-radius: clamp(10px, 2vw, 20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+  animation: fadeInUp 1s ease-out;
+  margin-bottom: 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-box2 {
+  background: rgba(22, 192, 45, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: clamp(8px, 1.5vw, 15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-top: 25px;
+  padding: clamp(6px, 1.5vw, 14px) clamp(12px, 3vw, 20px);
+  animation: fadeInUp 1s ease-out 0.2s;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Tipografia en headers */
+#inicio h1,
+#inicio h2 {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 1s ease-out;
+}
+
+#inicio h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: -2%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#inicio h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(49, 54, 53, 0.822);
+  color: #181b1b;
+  cursor: pointer;
+}
+
+#inicio h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #ddd;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+/* Animaciones */
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-80%); }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
