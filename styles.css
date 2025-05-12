@@ -70,7 +70,7 @@ body {
   height: 100%;
   width: max-content;
   min-width: 200%;
-  animation: deslizar 50s linear infinite alternate;
+  animation: deslizar 60s linear infinite alternate;
 }
 
 .img-box {
