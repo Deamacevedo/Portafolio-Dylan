@@ -372,3 +372,114 @@ section li {
     transform: translateY(0);
   }
 }
+
+/* Manejo del footer */
+footer {
+    background-image: linear-gradient(to left, #1a3d1f 0%, #112714 100%);
+    color: #fff;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    overflow: hidden; 
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; 
+  }
+  
+  /* Ajustes para los iconos en el footer */
+  .footer-section img.icon {
+    width: 18px !important; 
+    height: 18px !important;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  
+  /* El resto del CSS del footer permanece igual */
+  .footer-section {
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #62e76d;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .footer-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #23b82a;
+  }
+  
+  .footer-section p, 
+  .footer-section li {
+    color: #dbdcd7;
+    line-height: 1.8;
+    text-align: left;
+  }
+  
+  .footer-section a {
+    color: #dbdcd7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: #62e76d;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover img {
+    transform: scale(1.2);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .footer-bottom p {
+    color: #a1a1a1;
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
