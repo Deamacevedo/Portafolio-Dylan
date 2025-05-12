@@ -22,7 +22,8 @@ body {
     "educacion"
     "habilidades"
     "contacto"
-    "referencias";
+    "programacion"
+    "donaciones";
 }
 
 /* Fuentes */
@@ -39,7 +40,8 @@ body {
 #educacion { grid-area: educacion; }
 #habilidades { grid-area: habilidades; }
 #contacto { grid-area: contacto; }
-#referencias { grid-area: referencias; }
+#programacion { grid-area: programacion; }
+#donaciones { grid-area: donaciones; }
 
 /* Manejo header */
 #inicio {
@@ -355,6 +357,75 @@ section li {
   border: none;
   outline: none;
 }
+/* Seccion donacion */
+.donacion-section {
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(35, 184, 42, 0.2);
+}
+
+.donacion-section::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #23b82a, #62e76d, #23b82a);
+    z-index: -1;
+    background-size: 200% 200%;
+    animation: gradientBG 5s ease infinite;
+    border-radius: 20px;
+}
+
+.donacion-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #0070ba, #009cde);
+    color: white !important;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 112, 186, 0.3);
+    border: none;
+    cursor: pointer;
+  }
+
+  .donacion-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 112, 186, 0.4);
+    background: linear-gradient(to right, #009cde, #0070ba);
+  }
+
+  .paypal-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .corazon-animado {
+    font-size: 2rem;
+    margin-top: 15px;
+    animation: latido 1.5s ease infinite;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes latido {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }  
 
 /* Animaciones */
 @keyframes deslizar {
@@ -557,4 +628,17 @@ footer {
     .social-icons {
       justify-content: center;
     }
+    .donacion-section {
+        padding: 20px;
+        margin: 30px auto;
+      }
+      
+      .donacion-text p {
+        font-size: 1rem;
+      }
+      
+      .donacion-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+      }
   }
