@@ -363,7 +363,7 @@ section li {
     box-shadow: 0 10px 30px rgba(35, 184, 42, 0.2);
 }
 
-.donacion-section::before {
+/* .donacion-section::before {
     content: '';
     position: absolute;
     top: -10px;
@@ -375,7 +375,7 @@ section li {
     background-size: 200% 200%;
     animation: gradientBG 5s ease infinite;
     border-radius: 20px;
-}
+} */
 
 .donacion-btn {
     display: inline-flex;
